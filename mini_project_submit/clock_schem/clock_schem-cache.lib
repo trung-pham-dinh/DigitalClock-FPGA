@@ -1,0 +1,106 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# TRUNG_FSM
+#
+DEF TRUNG_FSM F 0 40 Y Y 1 F N
+F0 "F" 500 -900 50 H V C CNN
+F1 "TRUNG_FSM" 0 300 50 H V C CNN
+F2 "" 0 300 50 H I C CNN
+F3 "" 0 300 50 H I C CNN
+DRAW
+S -400 200 500 -800 0 1 0 N
+X c0h ~ 600 -400 100 L 50 50 1 1 O
+X c0m ~ 600 -200 100 L 50 50 1 1 O
+X c0s ~ 600 0 100 L 50 50 1 1 O
+X c1h ~ 600 -300 100 L 50 50 1 1 O
+X c1m ~ 600 -100 100 L 50 50 1 1 O
+X c1s ~ 600 100 100 L 50 50 1 1 O
+X clk1hz ~ -500 0 100 R 50 50 1 1 I
+X clk50Mhz ~ -500 100 100 R 50 50 1 1 I
+X disable_hour ~ 600 -700 100 L 50 50 1 1 O
+X disable_min ~ 600 -600 100 L 50 50 1 1 O
+X disable_sec ~ 600 -500 100 L 50 50 1 1 O
+X HEX ~ -100 -900 100 U 50 50 1 1 O
+X KEY0 ~ -500 -100 100 R 50 50 1 1 I
+X KEY1 ~ -500 -200 100 R 50 50 1 1 I
+X KEY2 ~ -500 -300 100 R 50 50 1 1 I
+X KEY3 ~ -500 -400 100 R 50 50 1 1 I
+X rst ~ -500 -600 100 R 50 50 1 1 I
+X trans ~ -500 -500 100 R 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# TRUNG_clock_divider
+#
+DEF TRUNG_clock_divider c 0 40 Y Y 1 F N
+F0 "c" 300 200 50 H V C CNN
+F1 "TRUNG_clock_divider" -100 200 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+S -400 100 400 -100 0 1 0 N
+X clk1Hz ~ 500 0 100 L 50 50 1 0 O
+X clk50Mhz ~ -500 0 100 R 50 50 1 0 I
+ENDDRAW
+ENDDEF
+#
+# TRUNG_hour
+#
+DEF TRUNG_hour h 0 40 Y Y 1 F N
+F0 "h" 300 100 50 H V C CNN
+F1 "TRUNG_hour" -400 100 50 H V C CNN
+F2 "" 0 -200 50 H I C CNN
+F3 "" 0 -200 50 H I C CNN
+DRAW
+S -500 0 400 -600 0 1 0 N
+X HEX ~ 500 -100 100 L 50 50 1 0 O
+X ~ ~ 0 100 100 D 50 50 1 0 I
+X c0h ~ -600 -300 100 R 50 50 1 1 I
+X c1h ~ -600 -200 100 R 50 50 1 1 I
+X clk50Mhz ~ -600 -100 100 R 50 50 1 1 I
+X disable_hour ~ -600 -400 100 R 50 50 1 1 I
+X rst ~ -600 -500 100 R 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# TRUNG_minute
+#
+DEF TRUNG_minute m 0 40 Y Y 1 F N
+F0 "m" 0 300 50 H V C CNN
+F1 "TRUNG_minute" 0 400 50 H V C CNN
+F2 "" 100 -200 50 H I C CNN
+F3 "" 100 -200 50 H I C CNN
+DRAW
+S -500 0 400 -600 0 1 0 N
+X c0m ~ -600 -300 100 R 50 50 1 1 I
+X c1m ~ -600 -200 100 R 50 50 1 1 I
+X clk50Mhz ~ -600 -100 100 R 50 50 1 1 I
+X count_over ~ 100 -700 100 U 50 50 1 1 O
+X disable_min ~ -600 -400 100 R 50 50 1 1 I
+X HEX ~ 500 -100 100 L 50 50 1 1 O
+X rst ~ -600 -500 100 R 50 50 1 1 I
+X ~ ~ 100 100 100 D 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# TRUNG_second
+#
+DEF TRUNG_second s 0 40 Y Y 1 F N
+F0 "s" 0 300 50 H V C CNN
+F1 "TRUNG_second" 0 400 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+S -600 200 400 -600 0 1 0 N
+X c0s ~ -700 -100 100 R 50 50 1 1 I
+X c1s ~ -700 0 100 R 50 50 1 1 I
+X clk50Mhz ~ -700 100 100 R 50 50 1 1 I
+X counter_over ~ 0 -700 100 U 50 50 1 1 O
+X disable_sec ~ -700 -200 100 R 50 50 1 1 I
+X HEX ~ 500 100 100 L 50 50 1 1 O
+X rst ~ -700 -300 100 R 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+#End Library
